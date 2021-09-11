@@ -23,7 +23,7 @@ public class Main {
 		
 		//오름차순 정렬
 		System.out.println("Fruit List (ordered by name)");
-		Collections.sort(list);
+		Collections.sort(list, new FruitComparator());
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).toString());
 		}
@@ -31,7 +31,7 @@ public class Main {
 		System.out.println();
 		//내림차순 정렬
 		System.out.println("Fruit List (reverse ordered by name)");
-		Collections.sort(list, Collections.reverseOrder());
+		Collections.sort(list, new FruitComparatorDesc());
 		for (Fruit ss : list) {
 			System.out.println(ss.toString());
 		}
